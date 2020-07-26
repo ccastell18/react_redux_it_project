@@ -1,5 +1,9 @@
 import React, { useEffect, Fragment } from 'react';
 
+//redux
+import { Provider } from 'react-redux';
+import store from './store';
+
 import SearchBar from './components/layouts/SearchBar';
 import Logs from './components/logs/Logs';
 import AddBtn from './components/layouts/AddBtn';
@@ -19,17 +23,19 @@ const App = () => {
     M.AutoInit();
   });
   return (
-    <Fragment>
-      <SearchBar />
-      <div className='container'>
-        <AddBtn />
-        <AddLogModal />
-        <EditLogModal />
-        <AddTechModal />
-        <TechListModal />
-        <Logs />
-      </div>
-    </Fragment>
+    <Provider store={store}>
+      <Fragment>
+        <SearchBar />
+        <div className='container'>
+          <AddBtn />
+          <AddLogModal />
+          <EditLogModal />
+          <AddTechModal />
+          <TechListModal />
+          <Logs />
+        </div>
+      </Fragment>
+    </Provider>
   );
 };
 
