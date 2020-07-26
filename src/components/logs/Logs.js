@@ -1,26 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import LogItem from './LogItem';
 import PreLoader from '../layouts/PreLoader';
+import PropTypes from 'prop-types';
+import { getLogs } from '../../actions/logActions';
 
-const Logs = () => {
-  const [logs, setLogs] = useState([]);
-  const [loading, setLoading] = useState(false);
-
+//destructured log brought in from mapStateToProps
+//can pull of certain parts of the state in destructuring.
+//must destructure actions brought in.
+const Logs = ({ log: { logs, loading }, getLogs }) => {
   useEffect(() => {
     getLogs();
     //esling-disable-next-line
   }, []);
 
-  const getLogs = async () => {
-    setLoading(true);
-    const res = await fetch('/logs');
-    const data = await res.json();
-
-    setLogs(data);
-    setLoading(false);
-  };
-
-  if (loading) {
+  if (loading || logs === null) {
     return <PreLoader />;
   }
 
@@ -38,4 +32,15 @@ const Logs = () => {
   );
 };
 
-export default Logs;
+Logs.propTypes = {
+  log: PropTypes.object.isRequired,
+};
+
+//bring in anything from app level state, bring it in as a prop
+//log is the name of the prop. Access the initial State options from logReducer
+//state.log refers to root reducer log: logReducer
+const mapStateToProps = (state) => ({
+  log: state.log,
+});
+//actions should be second parameter
+export default connect(mapStateToProps, { getLogs })(Logs);
