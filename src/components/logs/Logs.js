@@ -11,7 +11,7 @@ import { getLogs } from '../../actions/logActions';
 const Logs = ({ log: { logs, loading }, getLogs }) => {
   useEffect(() => {
     getLogs();
-    //esling-disable-next-line
+    //eslint-disable-next-line
   }, []);
 
   if (loading || logs === null) {
@@ -34,6 +34,7 @@ const Logs = ({ log: { logs, loading }, getLogs }) => {
 
 Logs.propTypes = {
   log: PropTypes.object.isRequired,
+  getLogs: PropTypes.func.isRequired,
 };
 
 //bring in anything from app level state, bring it in as a prop
