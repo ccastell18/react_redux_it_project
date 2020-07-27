@@ -6,13 +6,6 @@
       "attention": false,
       "tech": "John Doe",
       "date": "2020-07-27T06:13:34.719Z"
-    },
-    {
-      "id": 2,
-      "message": "Hard drive needs attention dghdfsgf",
-      "attention": true,
-      "tech": "Sam Smith",
-      "date": "2020-07-27T06:17:00.921Z"
     }
   ],
   "techs": [
