@@ -1,18 +1,18 @@
 {
   "logs": [
     {
-      "message": "Change network card",
+      "id": 1,
+      "message": "Change network card still dasfdsf",
       "attention": false,
       "tech": "John Doe",
-      "date": "2020-07-27T05:10:18.902Z",
-      "id": 1
+      "date": "2020-07-27T06:13:34.719Z"
     },
     {
-      "message": "Hard drive needs attention",
-      "attention": false,
-      "tech": "John Doe",
-      "date": "2020-07-27T05:10:41.515Z",
-      "id": 2
+      "id": 2,
+      "message": "Hard drive needs attention dghdfsgf",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2020-07-27T06:17:00.921Z"
     }
   ],
   "techs": [
