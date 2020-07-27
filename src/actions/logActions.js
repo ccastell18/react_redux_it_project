@@ -33,14 +33,15 @@ export const getLogs = () => async (dispatch) => {
   }
 };
 
-//Add log
+// Add new log
 export const addLog = (log) => async (dispatch) => {
   try {
     setLoading();
+
     const res = await fetch('/logs', {
       method: 'POST',
       body: JSON.stringify(log),
-      header: {
+      headers: {
         'Content-Type': 'application/json',
       },
     });
@@ -53,7 +54,7 @@ export const addLog = (log) => async (dispatch) => {
   } catch (err) {
     dispatch({
       type: LOGS_ERROR,
-      payload: err.response.data,
+      payload: err.response.statusText,
     });
   }
 };
