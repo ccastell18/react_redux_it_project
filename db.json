@@ -10,11 +10,6 @@
   ],
   "techs": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe"
-    },
-    {
       "id": 2,
       "firstName": "Sam",
       "lastName": "Smith"
@@ -33,11 +28,6 @@
       "firstName": "chris",
       "lastName": "smith",
       "id": 6
-    },
-    {
-      "firstName": "Jill",
-      "lastName": "Johnson",
-      "id": 7
     }
   ]
 }
