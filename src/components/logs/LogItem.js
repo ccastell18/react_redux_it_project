@@ -12,32 +12,35 @@ const LogItem = ({ log, deleteLog, setCurrent }) => {
   };
 
   return (
-    <li className="collection-item">
+    <li className="collection-item" style={{ padding: ' 30px' }}>
       <div>
         <a
+          style={{ fontSize: '40px' }}
           href="$edit-log-modal"
           className={`modal-trigger ${
-            log.attention ? 'red-text' : 'blue-text'
+            log.attention ? 'red-text' : 'teal-text'
           }`}
           onClick={() => setCurrent(log)}
         >
           {log.message}
         </a>
         <br />
+        <div style={{ paddingTop: '20px' }}>
+          <span className="grey-text">
+            <span className="black-text">Id # {log.id}</span> Last updated by{' '}
+            <span className="black-text">{log.tech}</span> on{' '}
+            <Moment format="MMMM Do YYYY, h:mm:ss a">{log.date}</Moment>
+          </span>
 
-        <span className="grey-text">
-          <span className="black-text">Id # {log.id}</span> Last updated by{' '}
-          <span className="black-text">{log.tech}</span> on{' '}
-          <Moment format="MMMM Do YYYY, h:mm:ss a">{log.date}</Moment>
-        </span>
-        <a href="#!" onClick={onDelete} className="secondary-content">
-          <i
-            style={{ fontSize: '30px', fontColor: 'black' }}
-            className="material-icons grey-text"
-          >
-            delete
-          </i>
-        </a>
+          <a href="#!" onClick={onDelete} className="secondary-content">
+            <i
+              style={{ fontSize: '30px' }}
+              className="material-icons black-text"
+            >
+              cancel
+            </i>
+          </a>
+        </div>
       </div>
     </li>
   );
