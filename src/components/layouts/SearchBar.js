@@ -11,22 +11,25 @@ const SearchBar = ({ searchLogs }) => {
   };
 
   return (
-    <nav style={{ marginBottom: '30px' }} className='blue'>
-      <div className='nav-wrapper'>
+    <nav style={{ marginBottom: '30px' }} className="teal">
+      <div className="nav-wrapper">
         <form>
-          <div className='input-field'>
+          <div className="input-field">
             <input
-              type='search'
-              id='search'
-              placeholder='Search Logs...'
+              style={{ fontSize: '40px' }}
+              type="search"
+              id="search"
+              placeholder="Search Logs..."
               ref={text}
               onChange={onChange}
             />
-            <label htmlFor='search' className='label-icon'>
+            <label htmlFor="search" className="label-icon">
               {' '}
-              <i className='material-icons'>search</i>{' '}
+              <i style={{ fontSize: '35px' }} className="material-icons">
+                search
+              </i>{' '}
             </label>
-            <i className='material-icons'>close</i>
+            <i className="material-icons">close</i>
           </div>
         </form>
       </div>

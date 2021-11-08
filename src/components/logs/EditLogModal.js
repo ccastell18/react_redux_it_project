@@ -43,40 +43,41 @@ const EditLogModal = ({ current, updateLog }) => {
   };
 
   return (
-    <div id='edit-log-modal' className='modal' style={modalStyle}>
-      <div className='modal-content'>
-        <h4>Enter System Log</h4>
-        <div className='row'>
-          <div className='input-field'>
+    <div id="edit-log-modal" className="modal" style={modalStyle}>
+      <div className="modal-content">
+        <h4>Edit System Log</h4>
+        <div className="row">
+          <div className="input-field">
             <input
-              type='text'
-              name='message'
+              type="text"
+              name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
         </div>
-        <div className='row'>
-          <div className='input-field'>
+        <div className="row">
+          <div className="input-field">
             <select
-              name='tech'
+              name="tech"
               value={tech}
-              className='browser-default'
-              onChange={(e) => setTech(e.target.value)}>
-              <option value='' disabled>
+              className="browser-default"
+              onChange={(e) => setTech(e.target.value)}
+            >
+              <option value="" disabled>
                 Select Technician
               </option>
               <TechSelectOptions />
             </select>
           </div>
         </div>
-        <div className='row'>
-          <div className='input-field'>
+        <div className="row">
+          <div className="input-field">
             <p>
               <label>
                 <input
-                  type='checkbox'
-                  className='filled-in'
+                  type="checkbox"
+                  className="filled-in"
                   checked={attention}
                   value={attention}
                   onChange={(e) => setAttention(!attention)}
@@ -87,11 +88,12 @@ const EditLogModal = ({ current, updateLog }) => {
           </div>
         </div>
       </div>
-      <div className='modal-footer'>
+      <div className="modal-footer">
         <a
-          href='#!'
+          href="#!"
           onClick={onSubmit}
-          className='modal-close waves-effect waves-light btn blue'>
+          className="modal-close waves-effect waves-light btn-large blue"
+        >
           Enter
         </a>
       </div>

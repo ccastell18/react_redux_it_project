@@ -2,10 +2,24 @@
   "logs": [
     {
       "id": 1,
-      "message": "Change network card still dasfdsf",
+      "message": "fix test",
       "attention": false,
       "tech": "Sam Smith",
-      "date": "2020-07-27T07:56:20.826Z"
+      "date": "2021-11-08T20:41:11.492Z"
+    },
+    {
+      "message": "another test",
+      "attention": true,
+      "tech": "Bob Williams",
+      "date": "2021-11-08T19:33:54.283Z",
+      "id": 2
+    },
+    {
+      "message": "abcdefghijk",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2021-11-08T20:03:21.594Z",
+      "id": 3
     }
   ],
   "techs": [
@@ -23,11 +37,6 @@
       "firstName": "Bob",
       "lastName": "Williams",
       "id": 5
-    },
-    {
-      "firstName": "chris",
-      "lastName": "smith",
-      "id": 6
     }
   ]
 }
